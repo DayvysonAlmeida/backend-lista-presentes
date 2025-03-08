@@ -26,8 +26,9 @@ app.post("/reservar", (req, res) => {
     }
 });
 
-const PORT = 8080;  // Forçar a porta 8080
+const PORT = process.env.PORT || 8080;  // Usar a porta 8080 explicitamente
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
 
